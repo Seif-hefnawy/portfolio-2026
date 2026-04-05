@@ -32,10 +32,14 @@
 ├── js/                 # ملفات الجافا سكريبت والمنطق
 ├── index.html          # الصفحة الرئيسية
 └── README.md           # ملف الشرح الحالي
+---
 
-<span style="color: #3b82f6;">🚀 التحديثات الأخيرة (Recent Updates)</span>
-<span style="color: #60a5fa;">تحسين أداء الفلترة: إضافة تأثيرات حركية ناعمة (Scale & Opacity) للمشاريع.</span>
+## <span style="color: #3b82f6;">🚀 التحديثات الأخيرة (Recent Updates)</span>
 
-<span style="color: #60a5fa;">إصلاح الـ Active State: معالجة مشكلة أزرار التنقل (Indicators) وضمان تفاعلها الصحيح.</span>
+* <span style="color: #60a5fa;">**تحسين أداء الفلترة:** إضافة تأثيرات حركية ناعمة (Scale & Opacity) للمشاريع عند التبديل بين الأقسام.</span>
 
-<span style="color: #60a5fa;">تجربة مستخدم ناعمة: منع إعادة تحميل الصفحة أو القفز المفاجئ (Scroll Jump) عند الضغط على الأزرار.</span>
+* <span style="color: #60a5fa;">**إصلاح الـ Active State:** معالجة مشكلة أزرار التنقل (Indicators) وضمان تفعيل لون الـ Accent عند الضغط فقط.</span>
+
+* <span style="color: #60a5fa;">**تجربة مستخدم ناعمة:** منع إعادة تحميل الصفحة أو القفز المفاجئ (Scroll Jump) عند التفاعل مع الروابط.</span>
+
+---
