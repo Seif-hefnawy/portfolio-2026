@@ -33,9 +33,9 @@
 ├── index.html          # الصفحة الرئيسية
 └── README.md           # ملف الشرح الحالي
 
-🚀 التحديثات الأخيرة (Recent Updates)
-تحسين أداء الفلترة وإضافة تأثيرات حركية للمشاريع.
+<span style="color: #3b82f6;">🚀 التحديثات الأخيرة (Recent Updates)</span>
+<span style="color: #60a5fa;">تحسين أداء الفلترة: إضافة تأثيرات حركية ناعمة (Scale & Opacity) للمشاريع.</span>
 
-إصلاح مشكلة الـ Active State في أزرار التنقل (Indicators).
+<span style="color: #60a5fa;">إصلاح الـ Active State: معالجة مشكلة أزرار التنقل (Indicators) وضمان تفاعلها الصحيح.</span>
 
-تحسين استجابة الروابط والزراير لمنع إعادة تحميل الصفحة أو القفز المفاجئ (Scroll Jump).
+<span style="color: #60a5fa;">تجربة مستخدم ناعمة: منع إعادة تحميل الصفحة أو القفز المفاجئ (Scroll Jump) عند الضغط على الأزرار.</span>
