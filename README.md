@@ -12,20 +12,30 @@
 
 ## ✨ المميزات (Features)
 
-* **Multi-Theme Switcher**: إمكانية الاختيار بين 4 ألوان مختلفة (الأزرق، الأخضر، البنفسجي، والبرتقالي الناري).
-* **Dark/Light Mode**: دعم كامل للوضع الليلي والنهاري مريح للعين.
-* **Responsive Design**: متوافق تماماً مع جميع الشاشات (موبايل، تابلت، ديسكتوب).
-* **Smooth Animations**: انتقالات وحركات ناعمة باستخدام CSS Transitions.
-* **Dynamic Portfolio Filter**: نظام فلترة متقدم للمشاريع باستخدام الـ JavaScript مع إضافة أنيميشن (Scale & Opacity) عند التنقل بين الأقسام.
-* **Interactive UI Components**: 
- 1- نظام Tabs تفاعلي للفلترة. 
- 2- Carousel Indicators ذكية تتغير حالتها (Active State) عند التفاعل.
- 3- منع السلوك الافتراضي للمتصفح (Prevent Default) لضمان تجربة تصفح ناعمة بدون قفزات (Smooth Navigation).
+- 🎨 **Multi-Theme Switcher**  
+  اختيار بين عدة ألوان (أزرق – أخضر – بنفسجي – برتقالي)
 
-* **Responsive Design**: متوافق تماماً مع جميع الشاشات (موبايل، تابلت، ديسكتوب).
-* **Local Storage**: حفظ اختيار المستخدم للثيم والوضع الليلي بحيث لا يتغير عند تحديث الصفحة.
-## 📂 هيكلة المشروع (Project Structure)
+- 🌙 **Dark / Light Mode**  
+  دعم كامل للوضع الليلي والنهاري
 
+- 📱 **Responsive Design**  
+  متوافق مع جميع الشاشات (موبايل – تابلت – ديسكتوب)
+
+- ⚡ **Smooth Animations**  
+  انتقالات سلسة باستخدام CSS
+
+- 🧠 **Dynamic Portfolio Filter**  
+  فلترة المشاريع مع أنيميشن (Scale & Opacity)
+
+- 🎯 **Interactive UI Components**
+  - Tabs تفاعلية
+  - Carousel Indicators ذكية (Active State)
+  - منع القفز المفاجئ (Smooth Navigation)
+
+- 💾 **Local Storage**  
+  حفظ إعدادات المستخدم (الثيم + الوضع الليلي)
+
+---
 ```text
 ├── assets/             # الصور والملفات المساعدة
 ├── css/                # ملفات التنسيق (Tailwind Output & Custom Styles)
@@ -33,7 +43,7 @@
 ├── index.html          # الصفحة الرئيسية
 └── README.md           # ملف الشرح الحالي
 ---
-
+```
 ## <span style="color: #3b82f6;">🚀 التحديثات الأخيرة (Recent Updates)</span>
 
 * <span style="color: #60a5fa;">**تحسين أداء الفلترة:** إضافة تأثيرات حركية ناعمة (Scale & Opacity) للمشاريع عند التبديل بين الأقسام.</span>
