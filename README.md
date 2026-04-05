@@ -1,4 +1,4 @@
-# 🚀 Personal Portfolio 2026 |  Seif El-Hefnawy
+# 🚀 Personal Portfolio 2026 |  ahmed El-Hefnawy
 
 بورتفوليو شخصي عصري ومستجيب (Responsive) مبني باستخدام تقنيات الـ Frontend الأساسية، مع نظام تغيير ثيمات متقدم ودعم للوضع الليلي.
 

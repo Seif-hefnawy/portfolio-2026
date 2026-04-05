@@ -243,3 +243,138 @@ window.addEventListener("DOMContentLoaded", () => {
   const activeCircle = document.querySelector(`[data-theme="${savedTheme}"]`);
   if (activeCircle) updateActiveClass(activeCircle);
 });
+
+
+const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const menuOverlay = document.getElementById('menu-overlay');
+    
+    function toggleMenu() {
+        navLinks.classList.toggle('active');
+        menuOverlay.classList.toggle('active');
+        const isExpanded = navLinks.classList.contains('active');
+        menuToggle.setAttribute('aria-expanded', isExpanded);
+        menuToggle.innerHTML = isExpanded ? 
+            '<i class="fa-solid fa-xmark text-2xl text-slate-700 dark:text-slate-300"></i>' : 
+            '<i class="fa-solid fa-bars text-2xl text-slate-700 dark:text-slate-300"></i>';
+    }
+    
+    if (menuToggle) {
+        menuToggle.addEventListener('click', toggleMenu);
+    }
+    
+    // إغلاق القائمة عند الضغط على overlay
+    if (menuOverlay) {
+        menuOverlay.addEventListener('click', toggleMenu);
+    }
+    
+    // إغلاق القائمة عند الضغط على أي رابط
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 768 && navLinks.classList.contains('active')) {
+                toggleMenu();
+            }
+        });
+    });
+    
+    // إغلاق القائمة عند تغيير حجم النافذة
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768 && navLinks.classList.contains('active')) {
+            toggleMenu();
+        }
+    });
+    
+ let AllBtnFilter = document.querySelectorAll("#portfolio-filters button");
+
+for (let i = 0; i < AllBtnFilter.length; i++) {
+    AllBtnFilter[i].addEventListener("click", function(e) {
+        // 1. منع الأكشن الأصلي
+        e.preventDefault(); 
+        
+        // 2. تثبيت السكرول في مكانه الحالي عشان الصفحة متهزش
+        let currentScroll = window.scrollY;
+
+        let allCardPort = document.querySelectorAll(".portfolio-item");
+        let category = this.getAttribute("data-filter");
+
+        // تغيير الـ Classes
+        AllBtnFilter.forEach(btn => btn.classList.remove("active", "bg-linear-to-r", "from-primary", "to-secondary"));
+        this.classList.add("active", "bg-linear-to-r", "from-primary", "to-secondary");
+
+        // الفلترة
+        allCardPort.forEach(card => {
+            card.style.opacity = "0";
+            card.style.transform = "scale(0.8)";
+            
+            setTimeout(() => {
+                card.style.display = "none";
+                if (card.getAttribute("data-category") == category || category == "all") {
+                    card.style.display = "block";
+                    // إجبار المتصفح يفضل في مكانه بعد ما الطول اتغير
+                    window.scrollTo(0, currentScroll); 
+                    
+                    setTimeout(() => {
+                        card.style.opacity = "1";
+                        card.style.transform = "scale(1)";
+                    }, 50);
+                }
+            }, 300);
+        });
+    });
+}
+if(AllBtnFilter.length > 0) {
+    AllBtnFilter[0].click();
+}
+let widthCard = document.querySelector(".testimonial-card").offsetWidth
+let index =0
+
+document.getElementById("next-testimonial").addEventListener("click", function(){
+    index++
+    if(index==4){
+    index=0
+}
+    updateCaro()
+})
+function updateCaro(){
+document.getElementById("testimonials-carousel").style.transform=`translateX(${widthCard*index}px)`
+}
+document.getElementById("prev-testimonial").addEventListener("click", function(){
+    index--
+    if(index<0){
+    index=3
+}
+    updateCaro()
+})
+
+let allIndicators = document.querySelectorAll(".carousel-indicator")
+
+for (let i = 0; i < allIndicators.length; i++) {
+    allIndicators[i].addEventListener("click" , function(){
+        index=i
+        updateCaro()
+    })
+    
+}
+
+// بنجيب كل النقط
+const indicators = document.querySelectorAll('.carousel-indicator');
+
+indicators.forEach(dot => {
+    dot.addEventListener('click', function() {
+        // 1. تنظيف الكل (ترجيعهم للحالة المطفية)
+        indicators.forEach(i => {
+            i.style.backgroundColor = ""; // بيشيل أي لون يدوي
+            i.classList.remove('bg-accent', 'scale-125');
+            i.classList.add('bg-slate-400');
+            i.setAttribute('aria-selected', 'false');
+        });
+
+        // 2. تشغيل اللي اتداس عليه (Active)
+        this.classList.remove('bg-slate-400');
+        this.classList.add('bg-accent', 'scale-125');
+        this.setAttribute('aria-selected', 'true');
+        
+        // تأكيد باللون اليدوي لو الكلاس معلق
+        this.style.backgroundColor = "var(--color-accent)"; 
+    });
+});
